@@ -1,0 +1,25 @@
+{
+    "name": "mobileka/mosaic-array",
+    "description": "A simple array manipulation class",
+    "keywords": ["arrays", "helpers"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Armen Markossyan",
+            "email": "a.a.markossyan@gmail.com",
+            "homepage": "http://blog.armen.im"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mobileka\\MosaicArray\\": "src/Mobileka/MosaicArray"
+        }
+    }
+}
