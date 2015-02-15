@@ -1,6 +1,10 @@
 Mosaic Array
 =============
 
+[![Build Status](https://travis-ci.org/mobileka/mosaic-array.svg?branch=master)](https://travis-ci.org/mobileka/mosaic-array)
+[![Coverage Status](https://coveralls.io/repos/mobileka/mosaic-array/badge.svg?branch=master)](https://coveralls.io/r/mobileka/mosaic-array?branch=master)
+[![Code Climate](https://codeclimate.com/github/mobileka/mosaic-array/badges/gpa.svg)](https://codeclimate.com/github/mobileka/mosaic-array)
+
 A simple array manipulation class.
 
 ## Requirements:
