@@ -289,26 +289,46 @@ class MosaicArrayTest extends \PHPUnit_Framework_TestCase
         $ma = new MosaicArray($fixture);
 
         $expect = [1, 2, 3, 'numbers' => [1, 2, 3]];
-        $result = $ma->excludeByRule(function ($key, $value) { return $key === 'key'; });
+        $result = $ma->excludeByRule(
+            function ($key, $value) {
+                return $key === 'key';
+            }
+        );
         assertSame($expect, $result);
 
         $expect = $fixture;
-        $result = $ma->excludeByRule(function ($key, $value) { return $value == 'nothing will be excluded'; });
+        $result = $ma->excludeByRule(
+            function ($key, $value) {
+                return $value == 'nothing will be excluded';
+            }
+        );
         assertSame($expect, $result);
 
         // exclude all numeric values
         $expect = ['key' => 'value', 'numbers' => [1, 2, 3]];
-        $result = $ma->excludeByRule(function ($key, $value) { return is_numeric($value); });
+        $result = $ma->excludeByRule(
+            function ($key, $value) {
+                return is_numeric($value);
+            }
+        );
         assertSame($expect, $result);
 
         // exclude all arrays
         $expect = ['key' => 'value', 1, 2, 3];
-        $result = $ma->excludeByRule(function ($key, $value) { return is_array($value); });
+        $result = $ma->excludeByRule(
+            function ($key, $value) {
+                return is_array($value);
+            }
+        );
         assertSame($expect, $result);
 
         // exclude all non-numeric keys
         $expect = [1, 2, 3];
-        $result = $ma->excludeByRule(function ($key, $value) { return !is_numeric($key); });
+        $result = $ma->excludeByRule(
+            function ($key, $value) {
+                return !is_numeric($key);
+            }
+        );
         assertSame($expect, $result);
     }
 
@@ -340,7 +360,6 @@ class MosaicArrayTest extends \PHPUnit_Framework_TestCase
         $ma = unserialize($ma);
 
         assertEquals($clone, $ma);
-
     }
 
     /**

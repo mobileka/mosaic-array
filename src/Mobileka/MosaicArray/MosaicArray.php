@@ -5,23 +5,23 @@ use Closure;
 /**
  * A simple array manipulation class
  *
- * @author Armen Markossyan <a.a.markossyan@gmail.com>
- * @version 1.0
+ * @author  Armen Markossyan <a.a.markossyan@gmail.com>
+ * @version 1.0.0
  */
 class MosaicArray implements \ArrayAccess, \IteratorAggregate, \Serializable, \Countable
 {
     /**
-    * A target array which acts as a source
-    *
-    * @var array
-    */
+     * A target array which acts as a source
+     *
+     * @var array
+     */
     protected $target = [];
 
     /**
      * Static construct
      *
-     * @param  array              $array
-     * @return Current_Class_Name
+     * @param  array $array
+     * @return static
      */
     public static function make(array $array)
     {
@@ -41,8 +41,8 @@ class MosaicArray implements \ArrayAccess, \IteratorAggregate, \Serializable, \C
     /**
      * Replace target array with a new one
      *
-     * @param  array              $target new target
-     * @return Current_Class_Name
+     * @param  array $target new target
+     * @return static
      */
     public function replaceTarget(array $target)
     {
